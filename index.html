@@ -458,7 +458,7 @@
                .skillset .level-title {
                font-size: 14px;
                margin-top: 0;
-		width: 50%;	
+      width: 50%; 
                }
                .skillset .level-bar {
                height: 12px;
@@ -538,7 +538,7 @@
                .hover-active .js_onecv-item:hover {
                   border: 2px solid #adb1b5;
                   cursor: pointer;
-		border-style: dashed;
+      border-style: dashed;
                }
                .options_toolbar {
                   margin-top: -30px;
@@ -912,13 +912,13 @@
                                  <!--//skills-section-->
                               </div><div id="onecv-interests" class="onecv-block" data-section="interests" data-pos="8">
                                  <!-- toolbar -->
-                                 <div class="options_toolbar">
+                                 <div class="options_toolbar" style="display: none;">
                                  
                                     <div class="bt bt-del-block js_delete-block"></div>
                                     <div class="bt bt-handle    js_sortable-handle ui-sortable-handle"></div>
                                  </div>
                                  <!-- end toolbar -->
-                                 <section class="section onecv-section"><!-- css editor hover -->
+                                 <section class="section onecv-section" style="border: 2px solid rgba(255, 255, 255, 0);"><!-- css editor hover -->
                                     <!-- title -->
                                     <div class="section-title" style="font-size: 16px; line-height: 18px;">
                                     
@@ -941,7 +941,7 @@
                                        <!-- end item -->
                                     </div>
                                     <!--interests-->
-                                    <div class="bt-add-field js_add-field" style="font-size: 19px; line-height: 18px;">Thêm mới</div><!-- button add fields -->
+                                    <div class="bt-add-field js_add-field" style="font-size: 19px; line-height: 18px; display: none;">Thêm mới</div><!-- button add fields -->
                                  </section>
                                  <!--//section-->
                               </div></div>
@@ -991,12 +991,12 @@
                                        <div class="education"><!-- css template education -->
                                           <div class="upper-row">
                                              <div class="job-title"><!-- css template degree -->
-                                                <div class="doc_degree" style="font-weight: 700; color: rgb(63, 70, 80); font-size: 13px; line-height: 18px;">Đại học An Giang</div><!-- js degree -->
+                                                <div class="doc_degree" style="font-weight: 700; color: rgb(63, 70, 80); font-size: 13px; line-height: 18px;">Công Nghệ Thông Tin</div><!-- js degree -->
                                              </div>
                                              
                                           </div>
                                           <div class="school upper-row"><!-- css template shool -->
-                                             <div class="doc_schoolname at inline" style="font-size: 13px; line-height: 18px;">Đại Học TopDev</div><!-- js schoool -->
+                                             <div class="doc_schoolname at inline" style="font-size: 13px; line-height: 18px;">Đại Học An Giang - Đại Học Quốc Gia TP. HCM</div><!-- js schoool -->
                                              <div class="inline"><!-- css template time -->
                                                 <span class="doc_MonthFromEdu onecv-month" style="font-size: 13px; line-height: 18px;">08</span>
                                                 <span class="doc_YearFromEdu" style="font-size: 13px; line-height: 18px;">2018</span> -
@@ -1361,6 +1361,7 @@
                      <div style="clear: both;"></div>
                   </div>
                </div>
+               <div class="js_add-sections css_add-sections">Thêm mục</div> <!-- button add sections -->
             </div>
          </div>
       </div>
