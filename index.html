@@ -10,7 +10,676 @@
 	<h1>Đơn Xin Việc Làm</h1>
 	<h2>Nguyễn Lê Gia Khang</h2>
 	<h2>Công Nghệ Thông Tin</h2>
-	<div id="onecv-main">
+	<div id="cv-layout-viewer" class="hover-active" style="">
+      <style type="text/css">
+            /*===========format page & print==========*/
+               @page {
+                  size: A4;
+                  margin: 0cm;
+                  padding: 0cm;
+               }
+               body {
+                  background-color: #fff0;  
+                  margin: 0px;
+                  -webkit-font-smoothing: antialiased;
+               }
+               #onecv-document-root {
+                  margin: 0cm auto;
+                  padding: 0cm;
+                  font-size: 12pt;
+                  position: relative;
+               }
+               #onecv-document {
+                  color: #000;
+               }
+               .onecv-document {
+                  width: 100%;
+               }
+               .onecv-document .onecv-page {
+                  width: 210mm;
+                  min-height: 296.86mm;
+                  padding: 20mm;
+                  margin: 0mm auto;
+                  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+                  background-color: white;
+               }
+               .onecv-document .onecv-subpage {
+                  padding: 5mm;
+                  min-height: 296.86mm;
+               }
+               .onecv-document .onecv-page {
+                  padding: 0mm;
+                  background-size: 100% 100%;
+                  background-repeat: no-repeat;
+                  position: relative;
+               }
+               .onecv-document .onecv-subpage {
+                  padding: 0mm;
+                  padding-bottom: 0cm;
+               }
+
+               #onecv-body {
+                  margin: 0 auto;
+                  width: 100%;
+                  min-height: 296.86mm;
+                  position: relative;
+                  font-family: 'Roboto', sans-serif;
+                  font-weight: normal;
+                  font-size: 13px;
+                  line-height: 18px;
+                  color: #545E6C;
+               }
+
+               #onecv-main {
+               }
+               #col-main {
+                  width: 70%;
+                  float: right;
+                  color: #444444;
+                  min-height: 296.86mm;
+                  padding-top: 25px;
+               }
+               #col-side {
+                  width: 30%;
+                  color: #444;
+                  min-height: 296.86mm;
+                  float: left;
+                  padding-bottom: 20px;
+               }
+               #col-main .onecv-block {
+                  width: 100%;
+                  padding: 5px 10px 5px 10px;
+               }
+
+               #col-main .row {
+               margin: 15px 0;
+               }
+
+               #col-side {
+               padding: 0px;
+               }
+               #col-side .onecv-block {
+                  width: 100%;
+                  padding: 5px 10px 5px 10px;
+               }
+               .onecv-month::after {
+                     margin-right: -3px;
+                     content: "/";
+                  }
+                .images{
+                        width: 100%;
+                  height: auto;
+                  text-align: center; 
+                        }
+               .thumb {
+                  width: 170px;
+                  height: 170px;
+                        background-color: #fff;
+                        background-image: none;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: cover;
+                        display: inline-block;
+                        
+                        cursor: pointer;
+                        border-radius: 50%;
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                        }            
+               @media print {
+                  body {
+
+                     background-size: 100% 100%;
+                     background-repeat: no-repeat;
+                     background-attachment: fixed;
+                  }
+                  .onecv-document .onecv-page {
+                     background-image: none;
+                  }
+                  #col-main .onecv-block:last-child {
+                     padding-bottom: 0;
+                  }
+                  #group-bottom-right .onecv-block:last-child {
+                     padding-bottom: 0;
+                  }
+               }
+               #cv-watermark {
+               position: absolute;
+               right: 10px;
+               bottom: 10px;
+               font-size: 11px;
+               color: #999;
+               }
+               @media print {
+               .onecv-document .onecv-page {
+                  position: initial;
+               }
+               }
+            /*===============end================*/
+            /*=============template===============*/
+               h1,
+               h2,
+               h3,
+               h4,
+               h5,
+               h6 {
+                  font-weight: 700;
+               }
+               a {
+               color: #e7bea7;
+               -webkit-transition: all 0.4s ease-in-out;
+               -moz-transition: all 0.4s ease-in-out;
+               -ms-transition: all 0.4s ease-in-out;
+               -o-transition: all 0.4s ease-in-out;
+               }
+               img {
+               width: 180px;
+               height: 180px;
+               border-radius: 50%;
+               margin-top: 20px;
+               margin-bottom: 10px;
+               }
+               a:hover {
+               text-decoration: underline;
+               color: #1a454f;
+               }
+               a:focus {
+               text-decoration: none;
+               }
+               p {
+               line-height: 1.5;
+               }
+               .inline{
+                  display: inline;
+               }
+               .star{
+                margin-right: 0px; 
+                color: #bfbfbf;
+               }
+               .star:before{
+               content: "\f111"; 
+               font-family: FontAwesome;
+               }
+               .checked_rating {
+               color: #e7bea7;
+               }
+               .level-star-inner{
+               /*css*/
+               }
+               .level-star{
+               float: right;
+               display: inline;
+               }
+               .level-title{
+               float: left;
+               display: inline;
+               }
+               .at::after{
+                  content: "|";
+                  padding-left: 5px;
+                  padding-right: 5px;
+               }
+               .wrapper {
+               background: #42A8C0;
+               max-width: 807px;
+               margin: 0 auto;
+               position: relative;
+               -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+               -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+               box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+               }
+               .sidebar-wrapper {
+               background: #ededed;
+               position: static;
+               right: 0;
+               height: 100%;
+               min-height: 800px;
+               color: #444;
+               }
+               .sidebar-wrapper a {
+               color: #444;
+               }
+               .sidebar-wrapper .profile-container {
+               padding: 5px;
+               color: #444;
+               }
+               .sidebar-wrapper .name {
+               font-size: 20px;
+               font-weight: 900;
+               margin-top: 0;
+               margin-bottom: 10px;
+               text-align: center;
+               line-height: 22px;
+               }
+               .sidebar-wrapper .tagline {
+              /* color: rgba(255, 255, 255, 0.6);*/
+               font-size: 13px;
+               font-weight: 400;
+               margin-top: 0;
+               margin-bottom: 0;
+               text-align: center;
+               }
+               .sidebar-wrapper .profile {
+               margin-bottom: 15px;
+               text-align: center;
+               }
+
+                .school {
+               margin-bottom: 10px;
+               margin-top: -6px;
+               color: #97AAC3;
+               }
+                .degree {
+               color: #3F4650;
+               font-size: 13px;
+               margin-top: 0;
+               /*margin-bottom: 5px;*/
+               /*font-weight: 500;*/
+               }
+               .meta {
+               color: rgba(6, 0, 255, 0.6);
+               font-weight: 500;
+               margin-bottom: 0px;
+               margin-top: 0;
+               }
+               .time {
+               color: rgba(255, 255, 255, 0.6);
+               font-weight: 500;
+               margin-bottom: 0px;
+               }
+               .email{
+                  word-break: break-all;
+               }
+               .website{
+                  word-break: break-all;
+               }
+               .linkedin{
+                  word-break: break-all;
+               }
+               .facebook{
+                  word-break: break-all;
+               }
+
+               #col-main .section-title {
+               text-transform: uppercase;
+               font-size: 16px;
+               font-weight: bold;
+               color: #333;
+               position: relative;
+               margin-top: 0;
+               text-align: center;
+               /*letter-spacing: 3px;*/
+               margin-bottom: 20px;
+               }
+               #col-main .section-title-first {
+               position: relative;
+               z-index: 2;
+               display: inline;
+               background: #fff;
+               padding-right: 20px;
+               padding-left: 20px;
+               }
+               .after{
+                  position: absolute;
+               left: 0;
+               top: 8px;
+               height: 1px;
+               background: #e7bea7;
+               content: "";
+               width: 100%;
+               display: block;
+               z-index: 1;
+               }
+               #col-side .section-title {
+               text-transform: uppercase;
+               font-size: 16px;
+               font-weight: bold;
+               color: #333;
+               position: relative;
+               margin-top: 0;
+               text-align: center;
+               /*letter-spacing: 3px;*/
+               margin-bottom: 20px;
+               }
+               #col-side .section-title-first {
+               position: relative;
+               z-index: 2;
+               display: inline;
+               background: #ededed;
+               padding-right: 15px;
+               padding-left: 15px;
+               }
+               .title{
+                  
+               }
+                 
+                .onecv-ico{}
+                  .onecv-ico:before
+                  {
+                  font-family: FontAwesome;
+                  font-style: normal;
+                  font-weight: normal;
+                  text-decoration: inherit;
+                  width: 25px;
+                  height: 25px;
+                  margin-right: 8px;
+                  display: inline-block;
+                  color: #fff;
+                  z-indexwebkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                  border-radius: 50%;
+                  -moz-background-clip: padding;
+                  -webkit-background-clip: padding-box;
+                  background-clip: padding-box;
+                  background: #e7bea7;
+                  text-align: center;
+                  padding-top: 4px;
+                  padding-left: 1px;
+                  font-size: 12px;
+                  position: relative;
+                  top: 0px;
+                  }   
+                   .icoAdress{
+                  margin-right: 5px;
+                  }
+                  .icoAdress:before{
+                   content: "\f015";      
+                  }
+                  .icoPhone{
+                  margin-right: 5px;
+                  }
+                  .icoPhone:before{
+                   content: "\f095";      
+                  }
+                  .icoEmail{
+                  margin-right: 5px;
+                  }
+                  .icoEmail:before{
+                   content: "\f003";      
+                  }
+                  .icoDate{
+                  margin-right: 5px;
+                  }
+                  .icoDate:before{
+                   content: "\f073";      
+                  }
+                  .icoPlace{
+                  margin-right: 5px;
+                  }
+                  .icoPlace:before{
+                   content: "\f041";      
+                  }
+                  .icoMarital{
+                  margin-right: 5px;
+                  }
+                  .icoMarital:before{
+                   content: "\f184";      
+                  }
+                  .icoCiti{
+                  margin-right: 5px;
+                  }
+                  .icoCiti:before{
+                   content: "\f1b6";      
+                  }
+                  .icoLinkedin{
+                  margin-right: 5px;
+                  }
+                  .icoLinkedin:before{
+                   content: "\f0e1";      
+                  }
+                  .icoFacebook{
+                  margin-right: 5px;
+                  }
+                  .icoFacebook:before{
+                   content: "\f230";      
+                  }
+                  .icoWebsite{
+                  margin-right: 5px;
+                  }
+                  .icoWebsite:before{
+                   content: "\f002";      
+                  }
+               .upper-row {
+                  position: relative;
+                  overflow: hidden;
+                  /*margin-bottom: 5px;*/
+               }
+               .job-title {
+                  color: #3F4650;
+                  font-size: 13px;
+                  margin-top: 0;
+                  margin-bottom: 5px;
+                  /*font-weight: 500;*/
+               }
+               .time {
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  color: #97AAC3;
+               }
+               .company {
+                  margin-bottom: 10px;
+                  margin-top: -5px;
+                  color: #97AAC3;
+               }
+               .skillset{
+                  padding: 2px;
+               }
+               .skillset .level-title {
+               font-size: 14px;
+               margin-top: 0;
+		width: 50%;	
+               }
+               .skillset .level-bar {
+               height: 12px;
+               background: #f5f5f5;
+               }
+               .skillset .level-bar-inner {
+               height: 12px;
+               background: #e7bea7;
+               }
+
+               .awards{
+                  padding: 5px;
+               }
+               .activity{
+                  font-weight: 700;
+               }
+               .activities{
+                  padding: 5px
+               }
+               .activity{
+
+               }
+               .details{
+                  color: #545E6C;
+               }
+               .additional{
+                  padding: 5px;
+               }
+               .experience{
+                  /*font-weight: 500;*/
+                  margin-bottom: 0px;
+                  margin-top: 0;
+                  padding: 5px;
+               }
+               .education{
+                  /*font-weight: 500;*/
+                  margin-bottom: 0px;
+                  margin-top: 0;
+                  padding: 5px;
+               }
+               .summary{
+                  padding: 5px;
+               }
+               .references{
+                  padding: 5px;
+               }
+               .projects{
+                  padding: 5px;
+               }
+               .interests{
+                  padding: 2px;
+               }
+               .languages{
+                  padding: 2px;
+                  position: relative;
+                  overflow: hidden;
+                  margin-bottom: 2px;
+               }
+               .fluency{
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  color: #e7bea7;
+               }
+            /*==============end=================*/
+            /*=============css editor==============*/
+               .section {
+                  border: 2px solid rgba(255, 255, 255, 0);
+                  padding: 5px;
+               }
+               .js_onecv-item {
+                  border: 2px solid rgba(255, 255, 255, 0);
+                  cursor: pointer;
+                  padding: 1px;
+                  margin-bottom: 5px;
+               }
+               .hover-active .js_onecv-item:hover {
+                  border: 2px solid #adb1b5;
+                  cursor: pointer;
+		border-style: dashed;
+               }
+               .options_toolbar {
+                  margin-top: -30px;
+                  display: none;
+                  height: 30px;
+                   border: 2px solid #adb1b5;
+                  width: auto;
+                  padding: 1px;
+                  text-align: center;  
+                  /*position: fixed;*/ 
+                  background: #adb1b5;
+                  border-radius: 4px 4px 0 0;
+                  z-index: 999999999999;
+               }
+               .options_toolbar .tip {
+                  min-width: 30px;
+                  width: auto;
+                  float: left;
+                  color: #fff;
+                  font-size: 20px;
+                  text-align: center;
+                  cursor: pointer;
+                  margin-left: 5px;
+               }
+               .options_toolbar .tip:before {
+                  content: "Nhấn vào để chỉnh sửa, nắm để kéo thả sắp xếp các mục.";
+                  font-size: 14px;
+                  font-style: italic;
+                  font-weight: 200;
+               }
+               .options_toolbar .bt {
+                  height: 100%;
+                  min-width: 30px;
+                  width: auto;
+                  float: right;
+                  color: #fff;
+                  font-size: 20px;
+                  text-align: center;
+                  cursor: pointer;
+                  margin: 7px;
+               }
+               .options_toolbar .bt-del-block {
+                  margin-right: 5px;
+                  position: relative;
+                  margin-top: 5px;
+               }
+               .options_toolbar .bt-del-block:before {
+                  content: "\f00d";
+                  font-family: FontAwesome;
+                  font-style: normal;
+                  font-weight: normal;
+                  text-decoration: inherit;
+                  color: #666;
+                  font-size: 25px ;
+               }
+               .options_toolbar .bt-handle {
+                  margin-right: 5px;
+                  position: relative;
+                  margin-top: 5px;
+               }
+               .options_toolbar .bt-handle:before {
+                  content: "\f047";
+                  font-family: FontAwesome;
+                  font-style: normal;
+                  font-weight: normal;
+                  text-decoration: inherit;
+                  color: #666;
+                  font-size: 24px;
+               }
+               .css_add-sections {
+                  display: block;
+                  position: inherit;
+                  margin-right: 5px;
+                  width: 100%;
+                  height: 40px;
+                  padding: 4px;
+                  border: 2px dashed #adb1b5;
+                  text-align: center;
+                  cursor: pointer;
+                  font-size: 22px;
+                  background: #f5f5f5;
+                  z-index: 9999999999;
+                  color: black;
+                  -webkit-animation: mymove 2s infinite;
+                  animation: mymove 2s infinite;
+               }
+               
+               .portlet-placeholder {
+                  border: 3px dashed #09f;
+                  margin: 0 1em 1em 0;
+                  -webkit-animation: mymove 2s infinite;
+                  animation: mymove 2s infinite;
+               }
+               @-webkit-keyframes mymove {
+               50% {
+                  border-color: coral;
+               }
+               }
+               @keyframes mymove {
+               50% {
+                  border-color: coral;
+               }
+               }
+               .bt-add-field {
+                  display: none;
+                  width: 100%;
+                  height: 30px;
+                  border: 2px dashed #adb1b5;
+                  text-align: center;
+                  cursor: pointer;
+                  font-size: 19px;
+                  background: #f5f5f5;
+                  padding: 5px;
+                  color: black;
+                  -webkit-animation: mymove 2s infinite;
+                  animation: mymove 2s infinite;
+               }
+               .bt-add-field:hover {
+                  border-color: #27ace2;
+                  color: #27ace2;
+               }
+            /*======================*/
+      </style>
+      <div id="onecv-document-root">
+         <div id="onecv-document" class="onecv-document">
+            <div class="onecv-page">
+               <div class="onecv-subpage">
+                  <div id="onecv-body">
+                     <div id="onecv-main">
                         <!-- Content  -->
                         <div id="col-side" class="sidebar-wrapper" style="min-height: 2244px;">
                            <div id="group-top-side">
@@ -63,13 +732,13 @@
                                  <div style="clear: both"></div>
                               </div><div id="onecv-summary" class="onecv-block" data-section="summary" data-pos="2">
                               <!-- toolbar -->
-                              <div class="options_toolbar">
+                              <div class="options_toolbar" style="display: none;">
    
                                  <div class="bt bt-del-block js_delete-block"></div>
                                  <div class="bt bt-handle    js_sortable-handle ui-sortable-handle"></div>
                               </div>
                               <!-- end toolbar -->
-                              <section class="section onecv-section"><!-- css editor hover -->
+                              <section class="section onecv-section" style="border: 2px solid rgba(255, 255, 255, 0);"><!-- css editor hover -->
                                  <!-- title -->
                                     <div class="section-title" style="font-size: 16px; line-height: 18px;">
                                     
@@ -412,13 +1081,13 @@
                               <!--//education-section-->
                            </div><div id="onecv-experience" class="onecv-block" data-section="experience" data-pos="4">
                               <!-- toolbar -->
-                              <div class="options_toolbar">
+                              <div class="options_toolbar" style="display: none;">
                                  <div class="tip"></div>
                                  <div class="bt bt-del-block js_delete-block"></div>
                                  <div class="bt bt-handle    js_sortable-handle ui-sortable-handle"></div>
                               </div>
                               <!-- end toolbar -->
-                              <section class="section onecv-section"><!-- css editor hover -->
+                              <section class="section onecv-section" style="border: 2px solid rgba(255, 255, 255, 0);"><!-- css editor hover -->
                                  <!-- title -->
                                  <div class="section-title" style="font-size: 16px; line-height: 18px;">
                                     
@@ -478,7 +1147,7 @@
                                        </div>   
                                     </div>
                                  </div>
-                                 <div class="bt-add-field js_add-field" style="font-size: 19px; line-height: 18px;">Thêm mới</div><!-- button add field -->
+                                 <div class="bt-add-field js_add-field" style="font-size: 19px; line-height: 18px; display: none;">Thêm mới</div><!-- button add field -->
                               </section>
                               <!--//experience-section-->
                            </div><div id="onecv-activities" class="onecv-block" data-section="activities" data-pos="6">
@@ -701,5 +1370,13 @@
                         
                         <div style="clear: both;"></div>
                      </div>
+                     <div style="clear: both;"></div>
+                  </div>
+               </div>
+               <div class="js_add-sections css_add-sections">Thêm mục</div> <!-- button add sections -->
+            </div>
+         </div>
+      </div>
+</div>
 </body>
 </html>
